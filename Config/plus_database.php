@@ -6,7 +6,7 @@ class database{
   private $db;
   private $port=5432; // Por defecto es 5432
   private $con=null;
-  public function getConnection($host="curso-qa.ciunlld8zamg.us-west-2.rds.amazonaws.com",$user="cursoqa",$password="12345678", $db="db_qa",$port=5432){
+  public function getConnection($host="curso-qa.ciunlld8zamg.us-west-2.rds.amazonaws.com",$user="tdd_01",$password="12345678", $db="db_djmp",$port=5432){
    $this->host=$host;
    $this->user=$user;
    $this->password=$password;
