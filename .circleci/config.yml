@@ -34,12 +34,7 @@ jobs:
 	      name: Instalar getcomposer	  
           command: php composer-setup.php
 	  
-	 
-		  
-		  
-	  
-	  
-      - checkout
+	
 
       # Download and cache dependencies
       - restore_cache:
