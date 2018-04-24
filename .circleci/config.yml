@@ -33,5 +33,9 @@ jobs:
           command: sudo php composer-setup.php
 
       - run:
-          name: Instalar dependencias
-          command: /var/www/html/composer.phar install --no-interaction
+          name: Instalar dependencies
+          command: /var/www/html/composer.phar install  --no-interaction
+
+      - run:
+          name: move dependencies
+          command: mv vendor/ /var/www/html/v1
