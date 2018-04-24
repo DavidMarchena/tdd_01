@@ -37,13 +37,19 @@ jobs:
           command: /var/www/html/composer.phar install  --no-interaction
 
       - run:
-          name: ejecutando comando de listar
+          name: Ejecutando comando de listar
           command: ls
 
       - run:
-          name: move dependencies
+          name: Mover dependencias
           command: mv vendor/ /var/www/html/v1
 
       - run:
-          name: ejecutando comando de listar
+          name: Ejecutando comando de listar
           command: ls
+
+      - run:
+          name: Ejecutando conjunto de comandos
+          command:  |
+            ls
+            v1/vendor/bin/phpunit --bootstrap Model/Usuarios.php --testdox Tests
