@@ -37,5 +37,13 @@ jobs:
           command: /var/www/html/composer.phar install  --no-interaction
 
       - run:
+          name: ejecutando comando de listar
+          command: ls
+
+      - run:
           name: move dependencies
           command: mv vendor/ /var/www/html/v1
+
+      - run:
+          name: ejecutando comando de listar
+          command: ls
