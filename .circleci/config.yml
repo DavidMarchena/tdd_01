@@ -8,26 +8,26 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/php:5.6.30-apache
-      
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mysql:9.4
     working_directory: /var/www/html
     steps:
-  	  - run:
-  	      name: permisos a la carpeta del proyecto
-  		    command: sudo chown -R cicleci:circleci /var/www/html
-  	  - checkout
-  	  
-  	  - run:
-  	      name: Installar curl
-  		    command: sudo apt-get install curl
-  		  
-  	  - run:
-  	      name: Descargar getcomposer
-  	      command: sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-  		  
-  	  - run:
-  	      name: Instalar getcomposer	  
-          command: php composer-setup.php
+      - run:
+          name: permisos a la carpeta del proyecto
+          command: sudo chown -R circleci:circleci /var/www/html
+      - checkout
+
+      - run:
+          name: Instalar curl
+          command: sudo apt-get install curl
+
+      - run:
+          name: Descargar getcomposer
+          command: sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+      - run:
+          name: Instalar getcomposer
+          command: sudo php composer-setup.php
